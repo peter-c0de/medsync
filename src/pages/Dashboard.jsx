@@ -11,7 +11,7 @@ function StatCard({label, value, note}){
   )
 }
 
-export default function Dashboard(){
+function Dashboard(){
   return (
     <div>
       <h2 className="fw-bold">Doctor Dashboard</h2>
@@ -30,30 +30,36 @@ export default function Dashboard(){
             <h5>Upcoming Appointments Today</h5>
             <div className="item-box mt-3">
               <div className="item-left">
-                <div className="item-avatar" />
+                <div className="item-avatar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>                  
                 <div>
                   <div className="item-title">Sarah Anderson</div>
-                  <div className="item-desc">10:30 AM • Clinic Visit</div>
+                  <div className="item-desc"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-4 h-4" aria-hidden="true"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg> 10:30 AM • Clinic Visit</div>
                 </div>
               </div>
               <Button variant="outline-primary" size="sm">Start</Button>
             </div>
             <div className="item-box">
               <div className="item-left">
-                <div className="item-avatar" />
+                <div className="item-avatar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>  
                 <div>
                   <div className="item-title">John Smith</div>
-                  <div className="item-desc">11:15 AM • Online Consultation</div>
+                  <div className="item-desc"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-4 h-4" aria-hidden="true"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg> 11:15 AM • Online Consultation</div>
                 </div>
               </div>
               <Button variant="outline-primary" size="sm">Start</Button>
             </div>
             <div className="item-box">
               <div className="item-left">
-                <div className="item-avatar" />
+                <div className="item-avatar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>  
                 <div>
                   <div className="item-title">Emma Davis</div>
-                  <div className="item-desc">2:00 PM • Home Visit</div>
+                  <div className="item-desc"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-4 h-4" aria-hidden="true"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg> 2:00 PM • Home Visit</div>
                 </div>
               </div>
               <Button variant="outline-primary" size="sm">Start</Button>
@@ -86,7 +92,9 @@ export default function Dashboard(){
         <div className="mt-3">
           <div className="item-box">
             <div className="item-left">
-              <div className="item-avatar" />
+              <div className="item-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-5 h-5 text-muted-foreground" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+              </div>  
               <div>
                 <div className="item-title">Sarah Anderson</div>
                 <div className="item-desc">Booked appointment</div>
@@ -97,7 +105,9 @@ export default function Dashboard(){
 
           <div className="item-box">
             <div className="item-left">
-              <div className="item-avatar" />
+              <div className="item-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-muted-foreground" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+              </div>  
               <div>
                 <div className="item-title">John Smith</div>
                 <div className="item-desc">Started online consultation</div>
@@ -105,9 +115,38 @@ export default function Dashboard(){
             </div>
             <div className="text-muted-small">4 hours ago</div>
           </div>
+
+          <div className="item-box">
+            <div className="item-left">
+              <div className="item-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-muted-foreground" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+              </div> 
+              <div>
+                <div className="item-title">Emma Davis</div>
+                <div className="item-desc">Home visist completed</div>
+              </div>
+            </div>
+            <div className="text-muted-small">6 hours ago</div>
+          </div>
+
+          <div className="item-box">
+            <div className="item-left">
+              <div className="item-avatar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign w-5 h-5 text-muted-foreground" aria-hidden="true"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div> 
+              <div>
+                <div className="item-title">Mike Johnson</div>
+                <div className="item-desc">Payment received</div>
+              </div>
+            </div>
+            <div className="text-muted-small">1 day ago</div>
+          </div>
+
         </div>
       </div>
 
     </div>
   )
 }
+
+export default Dashboard;

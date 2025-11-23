@@ -5,7 +5,9 @@ function AppointmentItem({name, type, time, meta, status}){
   return (
     <div className="item-box">
       <div className="item-left">
-        <div className="item-avatar" />
+        <div className="item-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
         <div>
           <div className="item-title">{name} <div className="text-muted-small">{type}</div></div>
           <div className="item-meta">{meta}</div>
@@ -13,14 +15,14 @@ function AppointmentItem({name, type, time, meta, status}){
       </div>
       <div>
         <span className={`status ${status==='Confirmed'?'confirmed':status==='Pending'?'pending':''}`}>{status}</span>
-        <Button variant="outline-secondary" size="sm" className="ms-2">✎</Button>
-        <Button variant="outline-danger" size="sm" className="ms-2">✖</Button>
+        <Button variant="outline-secondary" size="sm" className="ms-2">Edit</Button>
+        <Button variant="outline-danger" size="sm" className="ms-2">Delete</Button>
       </div>
     </div>
   )
 }
 
-export default function Appointments(){
+function Appointments(){
   return (
     <div>
       <h2 className="fw-bold">Manage Appointments</h2>
@@ -55,3 +57,5 @@ export default function Appointments(){
     </div>
   )
 }
+
+export default Appointments;

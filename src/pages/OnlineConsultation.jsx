@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 
-export default function OnlineConsultation(){
+function OnlineConsultation(){
   return (
     <div>
       <h2 className="fw-bold">Online Consultation</h2>
@@ -23,3 +23,5 @@ export default function OnlineConsultation(){
     </div>
   )
 }
+
+export default OnlineConsultation;

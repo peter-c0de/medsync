@@ -14,7 +14,7 @@ import PatientHistory from './pages/PatientHistory'
 import FollowUp from './pages/FollowUp'
 import Subscription from './pages/Subscription'
 
-export default function App() {
+function App() {
   return (
     <div className="app-root">
       <Container fluid className="p-0">
@@ -45,3 +45,5 @@ export default function App() {
     </div>
   )
 }
+
+export default App;

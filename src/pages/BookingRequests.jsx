@@ -5,7 +5,9 @@ function Request({name, type, desc, date, sent}){
   return (
     <div className="item-box">
       <div className="item-left">
-        <div className="item-avatar" />
+        <div className="item-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
         <div>
           <div className="item-title">{name} <span className={`badge-type ${type==='Online'?'blue':''}`}>{type==='Clinic'?'Clinic Visit':type==='Home'?'Home Visit':'Online Consultation'}</span></div>
           <div className="req-desc">{desc}</div>
@@ -21,7 +23,7 @@ function Request({name, type, desc, date, sent}){
   )
 }
 
-export default function BookingRequests(){
+function BookingRequests(){
   return (
     <div>
       <h2 className="fw-bold">Booking Requests</h2>
@@ -35,12 +37,20 @@ export default function BookingRequests(){
 
       <h5 className="fw-bold mt-5">Accepted Bookings (2)</h5>
       <div className="accepted-box item-box">
-        <div className="item-left"><div className="item-avatar" /><div><div className="item-title">Victoria Stone <span className="badge-type green">Online Consultation</span></div><div className="req-meta">Dec 19 at 4:00 PM</div></div></div>
+        <div className="item-left">
+          <div className="item-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <div><div className="item-title">Victoria Stone <span className="badge-type green">Online Consultation</span></div><div className="req-meta">Dec 19 at 4:00 PM</div></div></div>
         <div className="req-actions"><Button variant="light" className="me-2">Reschedule</Button><Button variant="danger">Cancel</Button></div>
       </div>
 
       <div className="accepted-box item-box">
-        <div className="item-left"><div className="item-avatar" /><div><div className="item-title">Adam Smith <span className="badge-type green">Clinic Visit</span></div><div className="req-meta">Dec 20 at 9:30 AM</div></div></div>
+        <div className="item-left">
+          <div className="item-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <div><div className="item-title">Adam Smith <span className="badge-type green">Clinic Visit</span></div><div className="req-meta">Dec 20 at 9:30 AM</div></div></div>
         <div className="req-actions"><Button variant="light" className="me-2">Reschedule</Button><Button variant="danger">Cancel</Button></div>
       </div>
 
@@ -53,3 +63,5 @@ export default function BookingRequests(){
     </div>
   )
 }
+
+export default BookingRequests;

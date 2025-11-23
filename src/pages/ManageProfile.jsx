@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button, Row, Col, Form } from 'react-bootstrap'
+import MaleAvatar from '../assets/male_avatar.jpg'
 
-export default function ManageProfile(){
+function ManageProfile(){
   return (
     <div>
       <h2 className="fw-bold">Manage Profile</h2>
@@ -11,7 +12,9 @@ export default function ManageProfile(){
         <h5>Profile Information</h5>
         <Row className="g-3 mt-2">
           <Col md={3} className="text-center">
-            <div className="profile-photo mb-2" />
+            <div className="profile-photo mb-2">
+              <img src={MaleAvatar} alt="" />
+            </div>
             <Button variant="light" className="border">Change Photo</Button>
           </Col>
           <Col md={9}>
@@ -43,10 +46,21 @@ export default function ManageProfile(){
       </div>
 
       <div className="row g-3 mt-4">
-        <div className="col-md-4"><div className="small-card"><div className="text-muted-small">Rating</div><h2 className="fw-bold">4.8</h2><small className="text-muted-small">265 reviews</small></div></div>
-        <div className="col-md-4"><div className="small-card"><div className="text-muted-small">Languages</div><p>English, Spanish, Arabic</p><Button variant="light" className="border btn-sm">Edit</Button></div></div>
-        <div className="col-md-4"><div className="small-card"><div className="text-muted-small">Certifications</div><p>MD, Board Certified</p><Button variant="light" className="border btn-sm">Manage</Button></div></div>
+        <div className="col-md-4"><div className="small-card"><div className="text-muted-small">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award w-4 h-4" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg> 
+          Rating
+        </div><h2 className="fw-bold">4.8</h2><small className="text-muted-small">265 reviews</small></div></div>
+        <div className="col-md-4"><div className="small-card"><div className="text-muted-small">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open w-4 h-4" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg> 
+          Languages
+        </div><p>English, Spanish, Arabic</p><Button variant="light" className="border btn-sm">Edit</Button></div></div>
+        <div className="col-md-4"><div className="small-card"><div className="text-muted-small">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award w-4 h-4" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg> 
+          Certifications
+        </div><p>MD, Board Certified</p><Button variant="light" className="border btn-sm">Manage</Button></div></div>
       </div>
     </div>
   )
 }
+
+export default ManageProfile;

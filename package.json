@@ -2,10 +2,13 @@
   "name": "medsync",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://peter-c0de.github.io/medsync",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.1.1",
@@ -17,6 +20,7 @@
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite": "^5.0.0"
   }
 }

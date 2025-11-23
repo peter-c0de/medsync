@@ -6,7 +6,9 @@ function Pending({name, desc, address, when}){
     <div className="card-like mb-3" style={{background:'#fffbe7'}}>
       <div className="d-flex justify-content-between">
         <div className="d-flex gap-3">
-          <div className="item-avatar" />
+          <div className="item-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
           <div>
             <div className="item-title">{name} <span className="badge-type">Pending</span></div>
             <div className="req-desc">{desc}</div>
@@ -23,7 +25,7 @@ function Pending({name, desc, address, when}){
   )
 }
 
-export default function ConfirmRejectVisits(){
+function ConfirmRejectVisits(){
   return (
     <div>
       <h2 className="fw-bold">Confirm / Reject Home Visits</h2>
@@ -35,13 +37,25 @@ export default function ConfirmRejectVisits(){
       <Pending name="Patricia Anderson" desc={'Routine elderly care and medication review'} address={'654 Walnut Street, Brooklyn, NY 10007'} when={'Dec 23 at 2:30 PM'} />
 
       <h5 className="mt-4">Confirmed Visits (2)</h5>
-      <div className="accepted-box item-box"><div className="item-left"><div className="item-avatar"/><div><div className="item-title">Elena Rodriguez <span className="badge-type green">Confirmed</span></div><div className="req-meta">Dec 19 at 4:00 PM • 321 Pine Street, Brooklyn, NY 10004</div></div></div><div><Button variant="light">Reschedule</Button><Button variant="outline-danger" className="ms-2">Cancel</Button></div></div>
-      <div className="accepted-box item-box"><div className="item-left"><div className="item-avatar"/><div><div className="item-title">James Wilson <span className="badge-type green">Confirmed</span></div><div className="req-meta">Dec 20 at 10:30 AM • 987 Birch Avenue, Queens, NY 10008</div></div></div><div><Button variant="light">Reschedule</Button><Button variant="outline-danger" className="ms-2">Cancel</Button></div></div>
+      <div className="accepted-box item-box"><div className="item-left">
+        <div className="item-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div><div className="item-title">Elena Rodriguez <span className="badge-type green">Confirmed</span></div><div className="req-meta">Dec 19 at 4:00 PM • 321 Pine Street, Brooklyn, NY 10004</div></div></div><div><Button variant="light">Reschedule</Button><Button variant="outline-danger" className="ms-2">Cancel</Button></div></div>
+      <div className="accepted-box item-box"><div className="item-left">
+        <div className="item-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div><div className="item-title">James Wilson <span className="badge-type green">Confirmed</span></div><div className="req-meta">Dec 20 at 10:30 AM • 987 Birch Avenue, Queens, NY 10008</div></div></div><div><Button variant="light">Reschedule</Button><Button variant="outline-danger" className="ms-2">Cancel</Button></div></div>
 
       <h5 className="mt-4">Rejected Requests</h5>
       <div className="card-like mb-3" style={{background:'#fff2f2'}}>
         <div className="d-flex justify-content-between align-items-center">
-          <div className="d-flex gap-3 align-items-center"><div className="item-avatar"/><div><div className="item-title">Kevin Thompson</div><div className="text-muted-small">Reason: Time slot not available • Rejected on Dec 18</div></div></div>
+          <div className="d-flex gap-3 align-items-center">
+            <div className="item-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <div><div className="item-title">Kevin Thompson</div><div className="text-muted-small">Reason: Time slot not available • Rejected on Dec 18</div></div></div>
           <Button variant="light">View Details</Button>
         </div>
       </div>
@@ -51,3 +65,5 @@ export default function ConfirmRejectVisits(){
     </div>
   )
 }
+
+export default ConfirmRejectVisits;
